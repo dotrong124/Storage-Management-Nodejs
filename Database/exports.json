@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "619336d8a3207809bfca6d5c"
+  },
+  "exportname": "16/11/2021",
+  "chiphi": [
+    "150001",
+    "60000",
+    "15000"
+  ],
+  "m3": [
+    "0.3",
+    "0.2",
+    "0.5"
+  ],
+  "khoiluong": [
+    "10",
+    "6",
+    "8"
+  ],
+  "kho": [
+    "98",
+    "Diệu Hiền",
+    "98"
+  ],
+  "tensanpham": [
+    "Nước tương",
+    "Khô cá đù",
+    "Nước mắm"
+  ],
+  "tendoitac": {
+    "$oid": "618e1100c3c3c7d38329f157"
+  },
+  "soluong": [
+    "200",
+    "400",
+    "150"
+  ],
+  "tongm3": "215",
+  "tongsoluong": "750",
+  "tongkhoiluong": "5600",
+  "tongchiphi": "56250200",
+  "tongm3loai": [
+    "60",
+    "80",
+    "75"
+  ],
+  "tongkhoiluongloai": [
+    "2000",
+    "2400",
+    "1200"
+  ],
+  "tongchiphiloai": [
+    "30000000",
+    "24000000",
+    "2250000"
+  ],
+  "deleted": false,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-16T04:43:04.210Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-17T16:41:36.278Z"
+  },
+  "slug": "16-11-2021-lQqMr6Mohf",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6193379ca3207809bfca6d6e"
+  },
+  "exportname": "16/11/2021",
+  "chiphi": [
+    "150001",
+    "60000",
+    "15000"
+  ],
+  "m3": [
+    "0.3",
+    "0.2",
+    "0.5"
+  ],
+  "khoiluong": [
+    "10",
+    "6",
+    "8"
+  ],
+  "kho": [
+    "98",
+    "Diệu Hiền",
+    "98"
+  ],
+  "tensanpham": [
+    "Nước tương",
+    "Khô cá đù",
+    "Nước mắm"
+  ],
+  "tendoitac": {
+    "$oid": "618e1100c3c3c7d38329f157"
+  },
+  "soluong": [
+    "200",
+    "150",
+    "150"
+  ],
+  "tongm3": "165",
+  "tongsoluong": "500",
+  "tongkhoiluong": "5600",
+  "tongchiphi": "41250200",
+  "tongm3loai": [
+    "60",
+    "30",
+    "75"
+  ],
+  "tongkhoiluongloai": [
+    "2000",
+    "900",
+    "1200"
+  ],
+  "tongchiphiloai": [
+    "30000200",
+    "9000000",
+    "2250000"
+  ],
+  "deleted": true,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-16T04:46:20.903Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-17T16:41:47.675Z"
+  },
+  "slug": "16-11-2021-lua4UKTWoJ",
+  "__v": 0
+}]

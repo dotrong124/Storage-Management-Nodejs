@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "tenkho": "98",
+  "diachi": "Hẻm 98 Trần Hưng Đạo",
+  "tienmatbang": "10000000",
+  "tiendien": "2000000",
+  "tiennuoc": "1000000",
+  "tongchiphi": "13000000",
+  "mota": "",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T07:57:02.794Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-16T15:32:50.844Z"
+  },
+  "slug": "98",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618e1f27bf4b078ad5c4a484"
+  },
+  "tenkho": "Diệu Hiền",
+  "diachi": "247 KDC Diệu Hiền",
+  "tienmatbang": "8000000",
+  "tiendien": "1000000",
+  "tiennuoc": "200000",
+  "tongchiphi": "1200000",
+  "mota": "",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T08:00:39.192Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-14T07:12:48.075Z"
+  },
+  "slug": "dieu-hien",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618e2c8a48406275e917e994"
+  },
+  "tenkho": "TPHCM",
+  "diachi": "TPHCM",
+  "tienmatbang": "4000000",
+  "tiendien": "2000000",
+  "tiennuoc": "1000000",
+  "tongchiphi": "7000000",
+  "mota": "",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T08:57:46.791Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T08:57:46.791Z"
+  },
+  "slug": "tphcm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6193d1c7edae3dbd52b7ac74"
+  },
+  "tenkho": "DNC",
+  "diachi": "Cần Thơ",
+  "tienmatbang": "5000000",
+  "tiendien": "1000000",
+  "tiennuoc": "2000000",
+  "tongchiphi": "8000000",
+  "mota": "Nam Cần Thơ",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-16T15:44:07.629Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-16T15:48:21.967Z"
+  },
+  "slug": "dnc",
+  "__v": 0
+}]

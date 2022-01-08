@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "username": "dotrong124",
+  "password": "892719Van",
+  "tennhanvien": {
+    "$oid": "618df50ac3b44c53b3861e4e"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-01T14:40:34.527Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T05:30:57.987Z"
+  },
+  "slug": "dotrong124",
+  "__v": 0,
+  "role": "admin"
+},{
+  "_id": {
+    "$oid": "618df400141dcba350a29fec"
+  },
+  "username": "dotrong125",
+  "password": "892719Van",
+  "role": "manager",
+  "tennhanvien": {
+    "$oid": "618758528bc737584f4476a9"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T04:56:32.247Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T04:56:32.247Z"
+  },
+  "slug": "dotrong125",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618e42a310ac0bc2068c3549"
+  },
+  "username": "tanlocct",
+  "password": "892719Van",
+  "role": "admin",
+  "tennhanvien": {
+    "$oid": "618758528bc737584f4476a9"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T10:32:03.033Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T10:32:03.033Z"
+  },
+  "slug": "tanlocct",
+  "__v": 0
+}]
