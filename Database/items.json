@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "618e42eb9adf3864286ce1ae"
+  },
+  "tennguyenlieu": "Khô cá khoai ",
+  "soluong": "200",
+  "chiphi": "6000000",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "tendoitac": {
+    "$oid": "618de7ca1d2ed435ff24eb88"
+  },
+  "deleted": true,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-12T10:33:15.569Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-17T16:46:37.993Z"
+  },
+  "slug": "kho-ca-khoai",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6190b2600e354ceedd5a9bfa"
+  },
+  "tennguyenlieu": "Thùng 3 lớp",
+  "soluong": "2",
+  "chiphi": "3000",
+  "khoiluong": "500",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e2c8a48406275e917e994"
+  },
+  "mota": "",
+  "tendoitac": {
+    "$oid": "618f0755a178c57816dfcfb2"
+  },
+  "deleted": false,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-14T06:53:20.421Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-14T06:53:20.421Z"
+  },
+  "slug": "thung-3-lop",
+  "__v": 0
+}]

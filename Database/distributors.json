@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "618e1100c3c3c7d38329f157"
+  },
+  "tendoitac": "Kho Cali",
+  "diachi": "7025 Cali",
+  "sdt": "022200511234",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T07:00:16.479Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T07:00:16.479Z"
+  },
+  "slug": "kho-cali",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619336b5a3207809bfca6d44"
+  },
+  "tendoitac": "Kho Texas",
+  "diachi": "19027 Texas",
+  "sdt": "029230752152",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-16T04:42:29.416Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-16T04:42:29.416Z"
+  },
+  "slug": "kho-texas",
+  "__v": 0
+}]

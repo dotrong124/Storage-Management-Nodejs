@@ -1,0 +1,34 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Kho ca",
+        "quanlity": "300",
+        "cost": "40000",
+        "idWarehouse": "98"
+      },
+      {
+        "id": 2,
+        "name": "Nuoc tuong",
+        "quanlity": "200",
+        "cost": "120000",
+        "idWarehouse": "Dieu Hien"
+      }
+    ],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Kho ca",
+        "quanlity": "500",
+        "cost": "50000",
+        "idWarehouse": "98"
+      },
+      {
+        "id": 2,
+        "name": "Nuoc tuong",
+        "quanlity": "200",
+        "cost": "120000",
+        "idWarehouse": "Dieu Hien"
+      }
+    ]
+  }

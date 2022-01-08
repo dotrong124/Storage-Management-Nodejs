@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "618e1122c3c3c7d38329f176"
+  },
+  "tendoitac": "Khô Phú Quốc",
+  "diachi": "127 LHP, PQ",
+  "sdt": "01234567898",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T07:00:50.545Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-12T07:00:50.545Z"
+  },
+  "slug": "kho-phu-quoc",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618f0755a178c57816dfcfb2"
+  },
+  "tendoitac": "Magi",
+  "diachi": "HCM",
+  "sdt": "01234567898",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-13T00:31:17.072Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-13T00:31:17.072Z"
+  },
+  "slug": "magi",
+  "__v": 0
+}]

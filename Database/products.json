@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "618f0691a178c57816dfcf8c"
+  },
+  "tensanpham": "Nước tương",
+  "soluong": "200",
+  "chiphi": "300000",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "m3": "0.3",
+  "tongm3": "60",
+  "tongchiphi": "60000000",
+  "deleted": true,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-13T00:28:01.751Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-13T14:09:08.304Z"
+  },
+  "slug": "nuoc-tuong",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618fc6fa1277035a441e13f5"
+  },
+  "tensanpham": "Nước tương",
+  "soluong": "200",
+  "chiphi": "150000",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "m3": "0.3",
+  "khoiluong": "10",
+  "tongkhoiluong": "2000",
+  "tongm3": "60",
+  "tongchiphi": "30000000",
+  "deleted": false,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-13T14:08:58.425Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-13T14:08:58.425Z"
+  },
+  "slug": "nuoc-tuong-HOKQukusM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618fc93d2d2e63e5f23f8db6"
+  },
+  "tensanpham": "Khô cá đù",
+  "soluong": "400",
+  "chiphi": "60000",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e1f27bf4b078ad5c4a484"
+  },
+  "mota": "",
+  "m3": "0.2",
+  "khoiluong": "6",
+  "tongkhoiluong": "2400",
+  "tongm3": "80",
+  "tongchiphi": "24000000",
+  "deleted": false,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-13T14:18:37.188Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-13T14:18:37.188Z"
+  },
+  "slug": "kho-ca-du",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6193288b85ee50914018a24b"
+  },
+  "tensanpham": "Nước mắm",
+  "soluong": "150",
+  "chiphi": "15000",
+  "hinhanh": "0",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "m3": "0.5",
+  "khoiluong": "8",
+  "tongkhoiluong": "1200",
+  "tongm3": "75",
+  "tongchiphi": "2250000",
+  "deleted": false,
+  "userId": {
+    "$oid": "617ffc622b08190bacc74fa5"
+  },
+  "createdAt": {
+    "$date": "2021-11-16T03:42:03.777Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-16T03:42:03.777Z"
+  },
+  "slug": "nuoc-mam",
+  "__v": 0
+}]

@@ -1,0 +1,47 @@
+[{
+  "_id": {
+    "$oid": "618758528bc737584f4476a9"
+  },
+  "tennhanvien": "Đỗ Thanh Trọng",
+  "cmnd": "092200007606",
+  "sdt": "0939012988",
+  "luong": "10000000",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-07T04:38:42.321Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-14T07:33:23.288Z"
+  },
+  "slug": "do-thanh-trong",
+  "__v": 0,
+  "gioitinh": "Nam",
+  "ngaysinh": "0"
+},{
+  "_id": {
+    "$oid": "618df50ac3b44c53b3861e4e"
+  },
+  "tennhanvien": "Đỗ Trọng",
+  "cmnd": "092200007606",
+  "sdt": "0939012988",
+  "luong": "5000000",
+  "kho": {
+    "$oid": "618e1e4e5fb6f2b97423b132"
+  },
+  "mota": "",
+  "gioitinh": "Nam",
+  "ngaysinh": "0",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2021-11-12T05:00:58.908Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-14T07:33:28.543Z"
+  },
+  "slug": "do-trong",
+  "__v": 0
+}]
