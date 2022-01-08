@@ -1,0 +1,30 @@
+<div class="ml-40 mr-40 mt-4">
+        <h2>Thêm tài khoản nhân viên</h2>
+        <form method="POST" action="/account/register/adduser">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="tennhanvien">Tên nhân viên</label>
+            <select class="form-control" id="tennhanvien" name="tennhanvien">
+                {{#each staff}}
+                <option value="{{this._id}}">{{this.tennhanvien}}</option>
+                {{/each }}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sdt">Quyền</label>
+            <select class="form-control" id="role" name="role">
+                <option value="admin">Admin</option>
+                <option value="manager">Quản lý kho</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+</div>
+

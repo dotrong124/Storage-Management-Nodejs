@@ -1,0 +1,33 @@
+<h1></h1>
+    <div class="col mt-4">
+        <a href="/storages" class="btn btn-primary mr-4">Trở lại</a>
+        <div class="row ml-4 mt-4">
+          <h5 class="mr-4 font-bold">Tên nhân viên: {{staffs.tennhanvien}}</h5>
+          <h5 class="ml-4 font-bold">Kho: {{staffs.kho.tenkho}}</h5>
+          <h5 class="ml-4   font-bold">Lương: {{staffs.luong}}</h5>
+        </div>
+        <table class="table mt-4 ">
+            <thead>
+                <tr>
+                <th scope="col" class=" font">Giới tính</th>
+                <th scope="col" class=" font">Ngày sinh</th>
+                <th scope="col" class=" font">CMND</th>
+                <th scope="col" class=" font">Sđt</th>
+                <th scope="col" class=" font">Mô tả</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class=" font">{{staffs.gioitinh}}</td>
+                <td class=" font">{{staffs.ngaysinh}}</td>
+                <td class=" font">{{staffs.cmnd}}</td>
+                <td class=" font">{{staffs.sdt}}</td>
+                <td class=" font">{{staffs.mota}}</td>
+            
+              </tr>
+                
+            </tbody>
+            
+        </table>
+    </div>
+

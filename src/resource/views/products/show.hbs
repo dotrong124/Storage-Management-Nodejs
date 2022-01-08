@@ -1,0 +1,40 @@
+<h1></h1>
+    <div class="col mt-4">
+        <a href="/products" class="btn btn-primary">Trở lại</a>
+        <div class="row ml-4 mt-4">
+                <h5 class=" font-bold">Tên sản phẩm: {{products.tensanpham}}</h5>
+                <h5 class=" font-bold ml-4">Tên kho:<a href="/storages/{{products.kho.slug}}">
+                            {{products.kho.tenkho}}
+                        </a></h5>
+                <h5 class=" font-bold ml-4">Người nhập: {{products.userId.username}} </h5>
+        </div>
+        <h5 class=" font-bold">Mô tả: {{products.mota}}</h5>
+
+        <table class="table mt-4 ">
+            <thead>
+                <tr>
+                <th scope="col" class=" font">Số lượng:</th>
+                <th scope="col"class=" font">Chi phí một sản phẩm: </th>
+                <th scope="col" class=" font">Tổng chi phí: </th>
+                <th scope="col" class=" font">Khối lượng một sản phẩm:</th>
+                <th scope="col" class=" font">Tổng khối lượng: </th>
+                <th scope="col" class=" font">Mét khối một sản phẩm: </th>
+                <th scope="col" class=" font">Tổng mét khối:</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class=" font">{{products.soluong}}</td>            
+                <td class=" font">{{products.chiphi}}</td>           
+                <td class=" font">{{products.tongchiphi}}</td>          
+                <td class=" font">{{products.khoiluong}}</td>               
+                <td class=" font">{{products.tongkhoiluong}}</td>                     
+                <td class=" font">{{products.m3}}</td>          
+                <td class=" font">{{products.tongm3}}</td>
+              </tr>
+                
+            </tbody>
+            
+        </table>
+    </div>
+

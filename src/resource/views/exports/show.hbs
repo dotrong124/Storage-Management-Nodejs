@@ -1,0 +1,103 @@
+<div class="col ml-4 mt-4 mr-4">
+        <a class="ml-4 btn btn-primary" href="/exports">Trở lại</a>
+        <h5 class="font-bold mr-4">Tên đơn hàng: {{exportinfo.exportname}}</h5>
+        <div class="row mt-4">
+        {{!-- <a class="btn btn-primary" href="/exports/trash">Thùng rác</a> --}}
+            <div>
+                <div class="row">
+                    <h6 class="font-bold ml-4">Tên đối tác:   {{exportinfo.tendoitac.tendoitac}}</h6>
+                    <h6 class="font-bold ml-10">Tên người nhập:   {{exportinfo.userId.username}}</h6>
+                    
+                </div>
+                    <h6 class="font-bold">Ngày nhập:   {{exportinfo.createdAt}}</h6>
+
+                 <table class="table mt-4">
+            <thead>
+                <tr>
+                <th >Phụ phí:   {{exportinfo.phuphi}}</th>
+                <th >Tiền vận chuyển:   {{exportinfo.tienvanchuyen}}</th>
+                <th >Tổng số lượng:   {{exportinfo.tongsoluong}}</th>
+                <th >Tổng chi phí:   {{exportinfo.tongchiphi}}</th>
+                <th >Tổng khối lượng:   {{exportinfo.tongkhoiluong}}</th>
+                <th>Tổng mét khối:   {{exportinfo.tongm3}}</th>
+                </tr>
+            </thead>
+        </table>
+            </div>
+        </div>
+        
+      <div class="display-flex  mr-4">
+            <div class="column ">
+              <h5 class="font-bold">STT</h5>
+                {{#each tensanpham}}
+                <div class="font-bold">{{sum @index 1}}</div>                            
+                {{/each}}      
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Tên sản phẩm</h5>
+                {{#each tensanpham}}
+                <div class="font-bold">{{this}}</div>                             
+                {{/each}}      
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Kho</h5>
+                {{#each kho}}              
+                <div class="font-bold">{{this}}</div>           
+                {{/each}}  
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Số lượng</h5>
+              
+                {{#each soluong}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Chi phí</h5>
+              
+                {{#each chiphi}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Tổng chi phí loại</h5>
+              
+                {{#each tongchiphiloai}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Khối lượng</h5>
+              
+                {{#each khoiluong}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>
+            <div class="column ">
+              <h5 class="font-bold">Tổng khối lượng loại</h5>
+              
+                {{#each tongkhoiluongloai}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>  
+            <div class="column ">
+              <h5 class="font-bold">Mét khối</h5>
+              
+                {{#each m3}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>
+            <div class="column">
+              <h5 class="font-bold">Tổng mét khối loại</h5>
+              
+                {{#each tongm3loai}}
+                <div class="font-bold">{{this}}</div>
+                {{/each}}
+            </div>   
+        </div>
+</div>
+
+
+
+                
+              

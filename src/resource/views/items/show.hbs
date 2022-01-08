@@ -1,0 +1,34 @@
+
+
+<h1></h1>
+    <div class="col mt-4">
+        <a href="/items" class="btn btn-primary">Trở lại</a>
+        <div class="row ml-4 mt-4">
+                <h5 class=" font-bold">Tên nguyên liệu: {{items.tennguyenlieu}}</h5>
+                <h5 class=" font-bold ml-4">Tên kho:<a href="/storages/{{items.kho.slug}}">
+                            {{items.kho.tenkho}}
+                        </a></h5>
+                <h5 class=" font-bold ml-4">Người nhập: {{items.userId.username}} </h5>
+        </div>
+        <h5 class=" font-bold">Mô tả: {{items.mota}}</h5>
+
+        <table class="table mt-4 ">
+            <thead>
+                <tr>
+                <th scope="col" class=" font">Số lượng:</th>
+                <th scope="col" class=" font">Tổng chi phí: </th>
+                <th scope="col" class=" font">Tổng khối lượng: </th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class=" font">{{items.soluong}}</td>            
+                <td class=" font">{{items.chiphi}}</td>           
+                <td class=" font">{{items.khoiluong}}</td>               
+              </tr>
+                
+            </tbody>
+            
+        </table>
+    </div>
+

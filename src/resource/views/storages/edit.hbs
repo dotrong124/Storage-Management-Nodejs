@@ -1,0 +1,49 @@
+<div class="mt-4 ml-4">
+    <h2>Sửa thông tin kho</h2>
+    <form method="POST" action="/storages/{{storage._id}}?_method=PUT">
+      <div class="form-group">
+        <label for="tenkho">Tên kho</label>
+        <input type="text" class="form-control" id="tenkho" value="{{storage.tenkho}}"name="tenkho" placeholder="Tên kho">
+      </div>
+      <div class="form-group">
+        <label for="diachi">Địa chỉ</label>
+        <input type="text" class="form-control" id="diachi" value="{{storage.diachi}}"name="diachi" placeholder="Địa chỉ">
+      </div>
+      <div class="form-group">
+        <label for="tienmatbang">Tiền mặt bằng</label>
+        <input type="text" class="form-control" id="tienmatbang" value="{{storage.tienmatbang}}"name="tienmatbang" placeholder="Tiền mặt bằng">
+      </div>
+      <div class="form-group">
+        <label for="tiendien">Tiền điện</label>
+        <input onblur="findTotalcp()" type="text" class="form-control" id="tiendien" value="{{storage.tiendien}}"name="tiendien" placeholder="Tiền điện">
+      </div>      
+      <div class="form-group">
+        <label for="tiennuoc">Tiền nước</label>
+        <input onblur="findTotalcp()" type="text" class="form-control" id="tiennuoc" value="{{storage.tiennuoc}}"name="tiennuoc" placeholder="Tiền nước">
+      </div>
+      <div class="form-group">
+        <label for="tongchiphi">Tổng chi phí</label>
+        <input onblur="findTotalcp()" type="text" class="form-control" id="tongchiphi" value="{{storage.tongchiphi}}"name="tongchiphi" placeholder="Tổng chi phí">
+      </div>
+      <div class="form-group">
+        <label for="mota">Chi tiết</label>
+        <textarea class="form-control" id="mota" name="mota">{{storage.mota}}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
+</div>
+<script type="text/javascript">
+    function findTotalcp(){
+          var arr = document.getElementsByName('tienmatbang');
+          var arrtd = document.getElementsByName('tiennuoc');
+          var arrtn = document.getElementsByName('tiendien');
+          var tot=0;
+          for(var i=0;i<arrtd.length;i++){
+              if(parseFloat(arrtd[i].value))
+                  tot += (parseFloat(arr[i].value)+parseFloat(arrtd[i].value)+parseFloat(arrtn[i].value));
+          }
+          document.getElementById('tongchiphi').value = tot;
+    }
+
+</script>

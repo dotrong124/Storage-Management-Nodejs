@@ -1,0 +1,93 @@
+<div class="mt-4">
+  <h2 class="">Sửa thông tin sản phẩm</h2>
+
+    <form method="POST" action="/products/{{product._id}}?_method=PUT">
+  <div class="row">
+    <div class="mr-4 mt-4">
+      <div class="form-group">
+        <label for="tensanpham">Tên sản phẩm</label>
+        <input type="text" class="form-control" id="tensanpham" value="{{product.tensanpham}}"name="tensanpham" placeholder="Tên sản phẩm">
+      </div>
+      <div class="form-group">
+            <label for="kho">Tên kho</label>
+            <select class="form-control" id="kho" name="kho">
+                {{#each storage}}
+                <option value="{{this._id}}">{{this.tenkho}}</option>
+                {{/each }}
+            </select>
+        </div>      
+      <div class="form-group">
+        <label for="soluong">Số lượng</label>
+        <input type="text" class="form-control" id="soluong" value="{{product.soluong}}" name="soluong" placeholder="Số lượng">
+      </div>
+    </div>
+    <div class="mt-4 ml-4">
+      
+      <div class="form-group">
+        <label for="chiphi">Chi phí một sản phẩm</label>
+        <input onblur="findTotalcp()" type="text" class="form-control" id="chiphi" value="{{product.chiphi}}" name="chiphi" placeholder="Chi phí">
+      </div>
+      <div class="form-group">
+        <label for="khoiluong">Khối lượng một sản phẩm</label>
+        <input onblur="findTotalkl()" type="text" class="form-control" id="khoiluong" value="{{product.khoiluong}}" name="khoiluong" placeholder="Khối lượng">
+      </div>
+      <div class="form-group">
+        <label for="m3">Mét khối một sản phẩm</label>
+        <input onblur="findTotalm3()" type="text" class="form-control" id="m3" value="{{product.m3}}"  name="m3" placeholder="Mét khối">
+      </div>
+      <div class="form-group">
+        <label for="mota">Chi tiết</label>
+        <textarea class="form-control" id="mota" name="mota">{{product.mota}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Thêm</button>
+    </div>
+    <div class="mt-4 ml-4">
+      <div class="form-group">
+        <label for="tongchiphi">Tổng chi phí</label>
+        <input type="text" class="form-control" id="tongchiphi" value="{{product.tongchiphi}}"  name="tongchiphi" placeholder="Tổng chi phí">
+      </div>
+      <div class="form-group">
+        <label for="tongkhoiluong">Tổng khối lượng</label>
+        <input type="text" class="form-control" id="tongkhoiluong" value="{{product.tongkhoiluong}}"  name="tongkhoiluong" placeholder="Tổng khối lượng">
+      </div>
+      <div class="form-group">
+        <label for="tongm3">Tổng mét khối</label>
+        <input type="text" class="form-control" id="tongm3" value="{{product.tongm3}}"  name="tongm3" placeholder="Tổng mét khối">
+      </div>
+    </div>
+  </div>
+    </form>
+</div>
+<script type="text/javascript">
+      function findTotalm3(){
+          var arr = document.getElementsByName('m3');
+          var arrsl = document.getElementsByName('soluong');
+          var tot=0;
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+          document.getElementById('tongm3').value = tot;
+    }
+    function findTotalcp(){
+          var arr = document.getElementsByName('chiphi');
+          var arrsl = document.getElementsByName('soluong');
+          var tot=0;
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+          document.getElementById('tongchiphi').value = tot;
+    }
+
+    function findTotalkl(){
+          var arr = document.getElementsByName('khoiluong');
+          var arrsl = document.getElementsByName('soluong');
+          var tot=0;
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+          document.getElementById('tongkhoiluong').value = tot;
+    }
+</script>

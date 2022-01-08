@@ -1,0 +1,52 @@
+    <h2 class="ml-40">Thêm nguyên liệu</h2>
+
+<div class="ml-35 ">
+
+    <form method="POST" action="/items/add">
+  <div class="row">
+    <div class="mr-4 mt-4">
+        <div class="form-group">
+          <label for="tennguyenlieu">Tên nguyên liệu</label>
+          <input type="text" class="form-control" id="tennguyenlieu" name="tennguyenlieu" placeholder="Tên nguyên liệu">
+        </div>
+        <div class="form-group">
+              <label for="tendoitac">Tên nhà cung cấp</label>
+              <select class="form-control" id="tendoitac" name="tendoitac">
+                  {{#each supplies}}
+                  <option value="{{this._id}}">{{this.tendoitac}}</option>
+                  {{/each }}
+              </select>
+        </div>
+        <div class="form-group">
+              <label for="kho">Tên kho</label>
+              <select class="form-control" id="kho" name="kho">
+                  {{#each storage}}
+                  <option value="{{this._id}}">{{this.tenkho}}</option>
+                  {{/each }}
+              </select>
+        </div>
+        <div class="form-group">
+          <label for="mota">Chi tiết</label>
+          <textarea class="form-control" id="mota" name="mota"></textarea>
+        </div>
+    </div>
+    <div class="mt-4 ml-4">
+        <div class="form-group">
+          <label for="chiphi">Chi phí</label>
+          <input type="text" class="form-control" id="chiphi" name="chiphi" placeholder="Chi phí">
+        </div>
+        <div class="form-group">
+          <label for="soluong">Số lượng</label>
+          <input type="text" class="form-control" id="soluong" name="soluong" placeholder="Số lượng">
+        </div>
+        <div class="form-group">
+          <label for="khoiluong">Khối lượng</label>
+          <input type="text" class="form-control" id="khoiluong" name="khoiluong" placeholder="Khối lượng">
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </div> 
+      
+    </div>
+
+    </form>
+</div>

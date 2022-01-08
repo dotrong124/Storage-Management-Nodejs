@@ -1,0 +1,64 @@
+<div class="col">
+  <div class="mt-4">
+    <h2>Sửa thông tin nguyên liệu</h2>
+    <form method="POST" action="/exports/{{exportinfo._id}}?_method=PUT">
+        <button type="submit" class="btn btn-primary">Thêm</button>
+        <div class="row mt-4">
+        {{!-- <a class="btn btn-primary" href="/exports/trash">Thùng rác</a> --}}
+        <input type="text" class="form-control" id="exportname" value="{{exportinfo.exportname}}" name="exportname" placeholder="Tên sản phẩm">
+        <input type="text" class="form-control" id="tendoitac" value="{{exportinfo.tendoitac}}" name="tendoitac" placeholder="Tên sản phẩm">
+        <input type="text" class="form-control" id="tongsoluong" value="{{exportinfo.tongsoluong}}" name="tongsoluong" placeholder="Tên sản phẩm">
+        <input type="text" class="form-control" id="tongm3" value="{{exportinfo.tongm3}}" name="tongm3" placeholder="Tên sản phẩm">
+        <input type="text" class="form-control" id="tongchiphi" value="{{exportinfo.tongchiphi}}" name="tongchiphi" placeholder="Tên sản phẩm">
+        </div>
+        <table class="table mt-4">
+        <div class="d-flex">
+            <th>Tên sản phẩm</th>                   
+            <th>Kho</th>                
+            <th>Số lượng</th>              
+            <th>Chi phí</th>             
+            <th>Tổng chi phí loại</th>              
+            <th>Mét khối</th>              
+            <th>Tổng mét khối loại</th>
+        </div>
+    </table>
+    <div class="d-flex">
+          <div class="column headerexport">
+              {{#each tensanpham}}
+                <input type="text" class="form-control" id="tensanpham" value="{{this}}"name="tensanpham" placeholder="Số lượng">
+              {{/each}}      
+          </div>
+          <div class="column pad">
+              {{#each kho}}              
+                <input type="text" class="form-control" id="kho" value="{{this}}"name="kho" placeholder="Số lượng">
+              {{/each}}  
+          </div>
+          <div class="column pad">
+              {{#each soluong}}
+                <input type="text" class="form-control" id="soluong" value="{{this}}"name="soluong" placeholder="Số lượng">
+              {{/each}}
+          </div>
+          <div class="column pad-2">
+              {{#each chiphi}}
+                <input type="text" class="form-control" id="chiphi" value="{{this}}"name="chiphi" placeholder="Số lượng">
+              {{/each}}
+          </div>
+          <div class="column pad-2">
+              {{#each tongchiphiloai}}
+                <input type="text" class="form-control" id="tongchiphiloai" value="{{this}}"name="tongchiphiloai" placeholder="Số lượng">
+              {{/each}}
+          </div>
+          <div class="column pad-2">
+              {{#each m3}}
+                <input type="text" class="form-control" id="m3" value="{{this}}"name="m3" placeholder="Số lượng">
+              {{/each}}
+          </div>
+          <div class="column pad-2">
+              {{#each tongm3loai}}
+                <input type="text" class="form-control" id="tongm3loai" value="{{this}}"name="tongm3loai" placeholder="Số lượng">
+              {{/each}}
+          </div>   
+        </div>
+  </form>
+</div>
+</div>

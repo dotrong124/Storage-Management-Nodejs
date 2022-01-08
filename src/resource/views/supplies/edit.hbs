@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <h2 class=" ml-40">Sửa thông tin nhà cung cấp</h2>
+    <form method="POST" action="/distributors/{{supplies._id}}?_method=PUT">
+      <div class="form-group ml-40 mr-40">
+        <label for="tendoitac">Tên nhà cung cấp</label>
+        <input type="text" class="form-control" id="tendoitac" value="{{supplies.tendoitac}}"name="tendoitac" placeholder="Tên nhà cung cấp">
+      </div>
+      <div class="form-group ml-40 mr-40">
+        <label for="diachi">Địa chỉ</label>
+        <input type="text" class="form-control" id="diachi" value="{{supplies.kho}}"name="diachi" placeholder="Địa chỉ">
+      </div>
+      <div class="form-group ml-40 mr-40">
+        <label for="sdt">Số điện thoại</label>
+        <input type="text" class="form-control" id="sdt" value="{{supplies.sdt}}" name="sdt" placeholder="Số điện thoại">
+      </div>
+      <div class="form-group ml-40 mr-40">
+        <label for="tennguyenlieu">Chi tiết</label>
+        <textarea class="form-control" id="tennguyenlieu" name="tennguyenlieu">{{supplies.tensanpham}}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary ml-40">Thêm</button>
+    </form>
+</div>

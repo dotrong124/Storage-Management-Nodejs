@@ -1,0 +1,180 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<form method="POST" action="/exports/create">
+    <div class="row ml-4 mt-4 mr-4">
+        {{!-- <a class="btn btn-primary" href="/exports/trash">Thùng rác</a> --}}
+        
+        <div class="d-flex">
+          
+          <div class="form-group">
+            <label for="exportname" class="form-label">Tên đơn hàng</label>
+            <input class="form-control" type="text" name="exportname" value="" placeholder="Tên đơn hàng">
+          </div>
+          <div class="form-group">
+            <label for="tendoitac" class="ml-4 form-label">Tên đối tác</label>
+            <select class="form-control ml-4" id="tendoitac" name="tendoitac">
+                {{#each distributor}}
+                <option value="{{this._id}}">{{this.tendoitac}}</option>
+                {{/each }}
+            </select>
+          </div>
+          <div class="form-group ml-4">
+            <label for="phuphi" class="ml-4 form-label">Phụ phí</label>
+            <input onblur="findTotalcp()" type="number" class="ml-4 form-control" id="phuphi"  name="phuphi" placeholder="Phụ phí">
+          </div>
+          <div class="form-group ml-4">
+            <label for="tienvanchuyen" class="ml-4 form-label">Tiền vận chuyển</label>
+            <input onblur="findTotalcp()" type="number" class="ml-4 form-control" id="tienvanchuyen"  name="tienvanchuyen" placeholder="Tiền vận chuyển">
+          </div>
+          <div class="form-group ml-4">
+            <label for="tongsoluong" class="ml-4 form-label">Tổng số lượng</label>
+            <input type="text" class="ml-4 form-control" id="tongsoluong"  name="tongsoluong" placeholder="Tổng số lượng" value="0">
+          </div>
+          <div class="form-group ml-4">
+            <label for="tongcp" class="ml-4 form-label">Tổng chi phí</label>
+            <input type="text" class="ml-4 form-control " id="tongcp"  name="tongchiphi" placeholder="Tổng chi phí" value="0"> 
+          </div>
+          <div class="form-group ml-4">
+            <label for="tongkhoiluong" class="ml-4 form-label">Tổng khối lượng</label>
+            <input type="text" class="ml-4 form-control" id="tongkhoiluong"  name="tongkhoiluong" placeholder="Tổng khối lượng" value="0">
+          </div>
+          
+          <div class="form-group ml-4 mr-4">
+            <label for="tongm3" class="ml-4 form-label">Tổng mét khối</label>
+            <input type="text" class="ml-4 form-control" id="tongm3"  name="tongm3" placeholder="Tổng mét khối" value="0">
+          </div>
+        </div>
+        <div class="form-group ml-4">
+          <label for="" class="ml-4 form-label"></label>
+          <button type="submit" class="ml-4 btn btn-primary">Xuất hàng</button>
+          </div>
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                <th scope="col"></th>
+                <th scope="col">STT</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Kho</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Chi phí</th>
+                <th scope="col">Tổng chi phí</th>
+                <th scope="col">Khối lượng</th>
+                <th scope="col">Tổng khối lượng</th>
+                <th scope="col">Mét khối</th>
+                <th scope="col">Tổng mét khối</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each products}}
+              <tr>
+                <td>
+                </td>
+                <th scope="row">{{sum @index 1}}</th>
+                <td><input type="text" class="form-control" id="tensanpham" value="{{this.tensanpham}}" name="tensanpham" placeholder="Tên sản phẩm" ></td>
+                <td><input type="text" class="form-control" id="kho" value="{{this.kho.tenkho}}" name="kho" placeholder="Kho"></td>
+                <td><input onblur="findTotalsl()" type="number" class="form-control soluong" id="soluong" value="{{this.soluong}}" name="soluong" placeholder="Số lượng"></td>
+                <td><input onblur="findTotalcp()" type="number" class="form-control chiphi" id="chiphi" value="{{this.chiphi}}" name="chiphi" placeholder="Chi phí"></td>
+                <td><input onblur="findTotalcploai()" type="number" class="form-control m3" id="tongchiphiloai" value="{{this.tongchiphiloai}}" name="tongchiphiloai" placeholder="Chi phí loại" ></td>
+                <td><input onblur="findTotalkl()" type="number" class="form-control m3" id="khoiluong" value="{{this.khoiluong}}" name="khoiluong" placeholder="Khối lượng loại" ></td>
+                <td><input onblur="findTotalklloai()" type="number" class="form-control m3" id="tongkhoiluongloai" value="{{this.tongkhoiluongloai}}" name="tongkhoiluongloai" placeholder="Tổng khối lượng loại" ></td>
+                <td><input onblur="findTotalm3()" type="number" class="form-control m3" id="m3" value="{{this.m3}}" name="m3" placeholder="Mét khối" ></td>
+                <td><input onblur="findTotalm3loai()" type="number" class="form-control m3" id="tongm3loai" value="{{this.tongm3loai}}" name="tongm3loai" placeholder="Mét khối loại" ></td>
+              </tr>
+              {{else}}
+                <tr>
+                  <td colspan="5">
+                    Hiện tại chưa có đơn hàng nào nào.
+                    <a href="/products">Thêm đơn hàng</a>
+                  </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            
+        </table>
+    </div>
+</form>
+
+
+<script type="text/javascript">
+    var staffId;
+    var deleteForm = document.forms['delete-item-form']
+    var btnDeleteItem= document.getElementById('btn-delete-item')
+    var m3 = document.getElementById('m3').value
+    var chiphi = document.getElementById('chiphi').value
+    var soluong = document.getElementById('soluong').value
+    
+    $('#delete-item-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        staffId = button.data('id')
+        })
+      function findTotalsl(){
+          var arr = document.getElementsByName('soluong');
+          var tot=0;
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += parseFloat(arr[i].value);
+          }
+          document.getElementById('tongsoluong').value = tot;
+    }
+      function findTotalm3(){
+          var arr = document.getElementsByName('m3');
+          var arrsl = document.getElementsByName('soluong');
+          var tot=0;
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+          document.getElementById('tongm3').value = tot;
+    }
+    function findTotalcp(){
+          var arr = document.getElementsByName('chiphi');
+          var tot=0;
+          var ttot=0;
+          var arrsl = document.getElementsByName('soluong');
+          var arrpp = document.getElementsByName('phuphi');          
+          var arrtvc = document.getElementsByName('tienvanchuyen');          
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+                  ttot = tot+(parseFloat(arrpp[0].value)+parseFloat(arrtvc[0].value));
+
+          }
+          document.getElementById('tongcp').value = ttot;
+    }
+    function findTotalcploai(){
+          var arr = document.getElementsByName('chiphi');
+          var arrcpl = document.getElementsByName('tongchiphiloai');
+          var arrsl = document.getElementsByName('soluong');
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                arrcpl[i].value = (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+    }
+    function findTotalm3loai(){
+          var arr = document.getElementsByName('m3');
+          var arrm3l = document.getElementsByName('tongm3loai');
+          var arrsl = document.getElementsByName('soluong');
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                arrm3l[i].value = (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          };
+    }
+    function findTotalkl(){
+          var arr = document.getElementsByName('khoiluong');
+          var tot=0;
+          var arrsl = document.getElementsByName('soluong');          
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                  tot += (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+          document.getElementById('tongkhoiluong').value = tot;
+    }
+    function findTotalklloai(){
+          var arr = document.getElementsByName('khoiluong');
+          var arrcpl = document.getElementsByName('tongkhoiluongloai');
+          var arrsl = document.getElementsByName('soluong');
+          for(var i=0;i<arr.length;i++){
+              if(parseFloat(arr[i].value))
+                arrcpl[i].value = (parseFloat(arr[i].value)*parseFloat(arrsl[i].value));
+          }
+    }
+</script>

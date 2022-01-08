@@ -1,0 +1,92 @@
+<h1></h1>
+    
+    <div class="mt-4 row">
+        <a class="btn btn-primary" href="/supplies">Nhà cung cấp</a>
+        <a class="ml-4 btn btn-primary" href="/supplies/create">Thêm nhà cung cấp</a>
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên nhà cung cấp</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Tên nguyên liệu cung cấp</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each supplies}}
+              <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.tendoitac}}</td>
+                <td>{{this.diachi}}</td>
+                <td>{{this.sdt}}</td>
+                <td>{{this.tensanpham}}</td>
+
+                <td>
+                    <a href="" class="btn btn-link btn-restore" data-id="{{this._id}}">Khôi phục</a>
+                    <a href="" data-id="{{this._id}}"class="btn btn-link" data-toggle="modal" data-target="#delete-product-modal">Xóa vĩnh viễn</a>
+                </td>
+              </tr>
+              {{else}}
+                <tr>
+                  <td colspan="5">
+                    Thùng rác trống.
+                    <a href="/supplies">Danh sách nhà cung cấp</a>
+                  </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            
+        </table>
+    </div>
+
+
+<div id="delete-product-modal" class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Chắc chưa
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-product" type="button" class="btn btn-danger" data-dismiss="modal">Chắc</button>
+        <button type="button" class="btn btn-secondary">Không</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form name="delete-product-form" method="POST"></form>
+<form name="restore-product-form" method="POST"></form>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    var distributorId;
+    var deleteForm = document.forms['delete-product-form']
+    var restoreForm = document.forms['restore-product-form']
+    var btnDeleteProduct= document.getElementById('btn-delete-product')
+    var btnRestore = $('.btn-restore')
+
+    $('#delete-product-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        distributorId = button.data('id')
+        })
+
+    btnDeleteProduct.onclick = function(){
+      deleteForm.action = '/supplies/' + distributorId + '/force?_method=DELETE'
+      deleteForm.submit()
+    }
+    btnRestore.click(function(e){
+      e.preventDefault();
+      distributorId = $(this).data('id')
+      restoreForm.action = '/supplies/' + distributorId + '/restore?_method=PATCH'
+      restoreForm.submit()
+    })
+  })
+</script>

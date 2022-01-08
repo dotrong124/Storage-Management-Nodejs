@@ -1,0 +1,85 @@
+<h1></h1>
+    
+    <div class="row mt-4 ml-4">
+        <a class="btn btn-primary" href="/storages/trash">Thùng rác</a>
+        <a class="ml-4 btn btn-primary" href="/storages/create">Thêm thông tin kho</a>
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên kho</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Tiền mặt bằng</th>
+                <th scope="col">Tổng chi phí</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            {{#each storage}}
+              <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>
+                    <a href="/storages/{{this.slug}}">
+                        {{this.tenkho}}
+                    </a></td>
+                <td>{{this.diachi}}</td>
+                <td>{{this.tienmatbang}}</td>
+                <td>{{this.tongchiphi}}</td>
+                <td>
+                    <a href="/storages/{{this._id}}/edit"type="button" class="btn btn-link">Sửa</a>
+                    <a href="/storages/{{this.slug}}/delete"type="button" data-id="{{this._id}}"class="btn btn-link" data-toggle="modal" data-target="#delete-item-modal">Xóa</a>
+                </td>
+              </tr>
+              {{else}}
+                <tr>
+                  <td colspan="5">
+                    Hiện tại chưa có kho nào.
+                    <a href="/storages/create">Thêm kho</a>
+                  </td>
+                </tr>
+            {{/each}}
+            </tbody>
+            
+        </table>
+    </div>
+
+
+<div id="delete-item-modal" class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Chắc chưa
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-item" type="button" class="btn btn-danger" data-dismiss="modal">Chắc</button>
+        <button type="button" class="btn btn-secondary">Không</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form name="delete-item-form" method="POST"></form>
+
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    var staffId;
+    var deleteForm = document.forms['delete-item-form']
+    var btnDeleteItem= document.getElementById('btn-delete-item')
+
+    $('#delete-item-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        staffId = button.data('id')
+        })
+
+    btnDeleteItem.onclick = function(){
+      deleteForm.action = '/storages/' + staffId + '?_method=DELETE'
+      deleteForm.submit()
+    }
+  })
+</script>
